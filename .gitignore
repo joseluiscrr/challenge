@@ -108,3 +108,5 @@ dist
 tmp/
 artifacts/
 dist/
+
+package-lock.json
