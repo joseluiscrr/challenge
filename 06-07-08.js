@@ -9,22 +9,29 @@ function crearClaseMascota() {
     constructor(nombre, dueño, actividades) {
       // El constructor de la clase Mascota recibe nombre (string), dueño (objeto), actividades (array de objetos)
       // ej:
+
       //[{actividad: 'salir a caminar', frecuencia: '1 vez al dia'}, {actividad: 'baño', frecuencia: '1 vez al mes'}]
+
       // Inicializar las propiedades de la mascota con los valores recibidos como argumento
       // Tu código aca:
 
+      this.nombre = nombre
+      this.dueño = dueño
+      this.actividades = actividades
     }
 
     getNombre() {
       // este método debe retornar el nombre de la mascota.
       // Tu código aca:
 
+      return this.nombre
     }
 
     getDueño() {
       // El método debe retornar nombre y apellido del dueño (concatenados).
       // Tu código aca:
-    
+
+      return this.dueño.nombre + ' ' + this.dueño.apellido
     }
 
     addActividad(actividad, frecuencia) {
@@ -32,6 +39,12 @@ function crearClaseMascota() {
       // No debe retornar nada.
       // Tu código aca:
 
+      var newActivity = {
+        actividad,
+        frecuencia
+      }
+
+      this.actividades.push(newActivity)
     }
 
     getActividades() {
@@ -40,7 +53,8 @@ function crearClaseMascota() {
       // [{actividad: 'salir a caminar', frecuencia: '1 vez al dia'}, {actividad: 'baño', frecuencia: '1 vez al mes'}]
       // mascotas.getActividades() debería devolver ['salir a caminar, 'baño']
       // Tu código aca:
-     
+
+      return this.actividades.map(pet => pet.actividad)
     }
 
     getFrecuencia(actividad) {
@@ -49,7 +63,16 @@ function crearClaseMascota() {
       // [{actividad: 'salir a caminar', frecuencia: '1 vez al dia'}, {actividad: 'baño', frecuencia: '1 vez al mes'}]
       // mascotas.getFrecuencia('baño') debería devolver '1 vez al mes'
       // Tu código aca:
+
+      var actividadStr = '';
+
+      for (var i = 0; i < this.actividades.length; i++) {
+        if (this.actividades[i].actividad === actividad) {
+          actividadStr = this.actividades[i].frecuencia;
+        }
+      }
       
+      return actividadStr
     }
   }
 

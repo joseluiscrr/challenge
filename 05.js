@@ -7,10 +7,19 @@
 function loboEstaONoEsta(array) {
   // La funcion recibe un array 'array' de strings y numeros  como parametro
   // la funcion debe retornar true o false dependiendo de si 'lobo' esta en el array o no
+
   // Por ej:
   // loboEstaONoEsta(['hola', 1, 3,  'palabra']) debe devolver false
   // ideas(['hola', 'buena', 'lobo', 4, 5, ]) debe devolver true
+
   // Tu código aca:
+
+  // function loboEstaONoEsta(array) {
+  // return array.some((item) => item.startsWith("lobo"));
+
+  return array.includes('lobo')
+  // }
+  // console.log(loboEstaONoEsta(array));
 }
 
 // No modifiques nada debajo de esta linea //

@@ -9,10 +9,19 @@ function pedirComida(array) {
   // debe retornar un objeto que diga cuantos menus de que tipo de dieta hay que pedir
   // (a fines practicos solo hay dieta "standard" y "vegan")
   // Por ej:
-  // pedirComida([{nombre: "Harry", dieta: "standard"}, {nombre: "Luna", dieta: 'vegan'}, {nombre: "Goyle", dieta: "standard"}])
+  // pedirComida([ {nombre: "Harry", dieta: "standard"}, {nombre: "Luna", dieta: 'vegan'}, {nombre: "Goyle", dieta: "standard"} ])
   // retorna {standard: 2, vegan: 1}
   // Tu código aca:
 
+  let reparto = { standard: 0, vegan: 0 }
+  
+  // Bien
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].dieta === 'standard') reparto.standard++
+    if (array[i].dieta === 'vegan') reparto.vegan++
+  }
+
+  return reparto
 }
 
 // No modifiques nada debajo de esta linea //

@@ -8,6 +8,7 @@ function cuantosMenores(invitados) {
   // La funcion llamada recibe como argumento un objeto 'invitados', en el objeto tenemos objetos que representan los invitados
   // a una fiesta en donde todos tienen una propiedad "edad" .
   // debe retornar la cantidad de invitados que son menores de 18.
+
   // Por ej:
   // let invitados = {
   //     Luna: {
@@ -24,8 +25,17 @@ function cuantosMenores(invitados) {
   //     }
   // };
   // cuantosMenores(invitados) devuelve 2
+
   // Tu código aca:
+
+
+  const edades = Object.values(invitados)
+
+  var cant = 0
   
+  edades.forEach((element) => { element.edad < 18 ? cant += 1 : cant })
+
+  return cant
 }
 
 
