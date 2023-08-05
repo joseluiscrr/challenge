@@ -25,7 +25,7 @@ function cuantosMenores(invitados) {
   // };
   // cuantosMenores(invitados) devuelve 2
   // Tu código aca:
-
+  
 }
 
 
